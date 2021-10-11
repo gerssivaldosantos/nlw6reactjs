@@ -1,9 +1,13 @@
-type ButtonProps = {
-    text?: Array<String>;
-}
 
-export function Button(props:ButtonProps){
+export function Button(){
+
+    let counter = 0;
+
+    function increment() {
+        counter += 1;
+        console.log(counter);
+    }
     return(
-        <button>{props.text || "default"}</button>
+        <button onClick={increment} >{counter}</button>
     )
 }
