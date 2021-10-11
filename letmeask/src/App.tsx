@@ -5,9 +5,8 @@ function App() {
     <div>    
       
     <h1>Hello World</h1>
-    <Button text="Hello World"/>
-    <Button text="Example two"/>
-    <Button/>
+    <Button text={["Gerssivaldo","Code"]}/>
+    
     </div>
 
   );
