@@ -1,14 +1,12 @@
-import { useState } from "react";
+import {  ButtonHTMLAttributes } from 'react'
+/* I do this import for use an type for html attributes in my props  */
+import '../styles/button.scss'
 
-export function Button(){
+/* The type imported being used */
+type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement>
 
-    const[counter,setCounter] = useState(0);
-
-    function increment() {
-        setCounter(counter + 1);
-        console.log(counter);
-    }
+export function Button(props: ButtonProps){
     return(
-        <button onClick={increment} >{counter}</button>
+        <button className="button" {...props} />
     )
 }
